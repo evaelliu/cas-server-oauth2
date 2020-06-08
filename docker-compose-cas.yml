@@ -1,0 +1,17 @@
+version: '2.0'
+
+services:
+  cas-server:
+    image: apereo/cas:v6.2.0-RC2
+    restart: always
+    ports:
+      - 8443:8443
+    #  - 8080:8080
+    external_links:
+      - mysql:mysql
+    volumes:
+      - /xt/cas-server/application_6.x.properties:/etc/cas/config/cas.properties
+      - /xt/cas-server/log4j2.xml:/etc/cas/config/log4j2.xml
+      - /xt/cas-server/services/:/etc/cas/services/
+      - /xt/cas-server/services/:/etc/cas/config/services/
+      - /xt/cas-server/cas.war:/cas-overlay/cas.war
