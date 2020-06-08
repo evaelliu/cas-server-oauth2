@@ -1,0 +1,11 @@
+{
+  "@class" : "org.apereo.cas.support.oauth.services.OAuthRegisteredService",
+  "clientId": "sharetome",
+  "clientSecret": "sharetome_secret",
+  "serviceId" : "^(https|http|imaps)://.*",
+  "name" : "OAuthService",
+  "id" : 1002,
+  "attributeReleasePolicy" : {
+    "@class" :"org.apereo.cas.services.ReturnAllAttributeReleasePolicy"
+  }
+}
